@@ -1,0 +1,52 @@
+#rowDiv{
+    margin:auto;
+    text-align: center;
+    width:100%;
+}
+input[type="text"]{
+    height:35px;
+    font-size: 20px;
+}
+#displayResult{
+    margin: auto;
+    width: 60%;
+    background-color: whitesmoke;
+    color: darkcyan;
+    border-radius:20px;
+}
+.footer{
+    background-color:whitesmoke;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    bottom: 0;
+}
+#nav_bar{
+    margin-bottom: 0px;
+    padding: 0;
+}
+.navbar-brand{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+body{
+    font-family: 'Tangerine' , Serif;
+    background-color:white;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+.weather{
+    color: #4aa1f3 !important;
+    font-size: 20px;
+    font-weight:600;
+}
+#logo{
+    max-height: 42px;
+    margin-right: 8px;
+    display: inline-block;
+    margin-top: -12px;
+}
