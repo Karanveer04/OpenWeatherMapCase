@@ -1,41 +1,41 @@
 $(document).ready(function () {
     $('#sendWeather').click(function () {
-
+        //Get city name from the input field
        var city = $("#city").val();
+       // API Id for accessing openweathermap.org
        const APPID = '07897dbfaeebe355c9948e5559b568b1';
 
        if(city != ''){
-           $.ajax({
+           $.ajax({                     // We use ajax method to get the data from the URL
                url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" +
                "&APPID=" + APPID + "",
                type: "GET",
-               dataType: "jsonp",
+               dataType: "jsonp",       // Return type of data is expected to be JSON text
                success: function (data) {
 
-                   var info = displayWeather(data);
+                   var weatherInfo = displayWeather(data);         // We call the displayWeather and assign it to variable
 
-                   $("#displayResult").html(info);
+                   $("#displayResult").html(weatherInfo);          // We choose the div displayResult to show the weatherInfo
 
-                   $("#city").val('');
+                   $("#city").val('');                             // Clear input field
                },
-               error: function () {
+               error: function () {     // Error is thrown if the city is undefined
                    $("#cityError").html("<div class='alert alert-danger text-center'><a href='#' class='close' data-dismiss='alert' " +
                        "aria-label='close'>&times;</a>City Doesn't Exist!</div>");
                    $("#city").val('');
                }
 
            });
-       } else{
+       } else{      // Error is thrown if the input field is empty
            $("#error").html("<div class='alert alert-danger text-center'><a href='#' class='close' data-dismiss='alert' " +
                "aria-label='close'>&times;</a>Fields cannot be empty</div>");
        }
     });
-    // Implement error handling (upon 404 error) - done
-    // Maybe implement functionality to include geographical coordinates
-    // Put APPID as a variable - done
+    /*
+        This method is used to extract data from the Json file.
+     */
     function displayWeather(data) {
         if(data.cod !== 404) {
-
             return "<h2 class='text-center'>Current Weather for " + data.name + ", " + data.sys.country + "</h2>" +
                 "<h4>.</h4>" +
                 "<h3 style='padding-left: 145px;' ><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
@@ -51,5 +51,4 @@ $(document).ready(function () {
                 "<h3 style='padding-left: 145px;'><strong>Clouds</strong>: " + data.clouds.all + "%</h3>";
         }
     }
-
 });
