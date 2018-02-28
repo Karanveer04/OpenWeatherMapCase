@@ -3,6 +3,11 @@
     text-align: center;
     width:100%;
 }
+#advanceSearch{
+    padding-top: 5px;
+    padding-left:100px;
+    text-align: center;
+}
 input[type="text"]{
     height:35px;
     font-size: 20px;
@@ -10,20 +15,14 @@ input[type="text"]{
 #displayResult{
     margin: auto;
     width: 60%;
-    background-color: whitesmoke;
-    color: darkcyan;
     border-radius:20px;
 }
-.footer{
-    background-color:whitesmoke;
-    width: 100%;
-    height: 30px;
-    margin-top: 10px;
-    bottom: 0;
-}
+
 #nav_bar{
     margin-bottom: 0px;
     padding: 0;
+    background-color: black;
+    border-style: inherit;
 }
 .navbar-brand{
     position: absolute;
@@ -33,8 +32,8 @@ input[type="text"]{
     margin:0 auto;
 }
 body{
-    font-family: 'Tangerine' , Serif;
-    background-color:white;
+    font-family: 'Tangerine', serif;
+    background:url("http://eskipaper.com/images/sea-wallpaper-31.jpg")center;
     font-size: 15px;
     margin: 0;
     padding: 0;

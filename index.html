@@ -28,33 +28,25 @@
     </nav>
 
     <!-- Container -->
-    <div class = "container" style="height: 795px;">
+    <div class = "container" style="height: 805px;">
         <div class ="row" style="margin-bottom:20px">
             <h3></h3>
-            <!--    <h3 class="text-center text-primary" style="color: darkcyan">Enter City Name</h3> -->
-                <span id="error"></span>
-                <span id = "cityError"></span>
-            </div>
+            <!--      <h1 class="text-center text-primary" style="color: black"><strong>Search</strong></h1>  -->
+              <span id="error"></span>
+              <span id = "cityError"></span>
+          </div>
+
+      <div class="row form-inline" id="rowDiv">
+          <input type="text" name="city" id="city" class="form-control" placeholder="City Name">
+          <button id="sendWeather" class="btn btn-primary">Search</button>
+      </div>
 
 
-        <div class="row form-group form-inline" id="rowDiv">
-            <input type="text" name="city" id="city" class="form-control" placeholder="City Name">
-            <button id="sendWeather" class="btn btn-primary" >Search City</button>
-            <h3></h3>
-            <h3></h3>
-        </div>
+      <div id="displayResult"></div>
+      <div id="quote"></div>
 
-        <div id="displayResult"></div>
-        <div id="quote"></div>
+      </div>
+  <!-- Footer -->
 
-        </div>
-    <!-- Footer -->
-    <div class="footer" style="height: 100px ; bottom:0">
-        <div class="container">
-            <div class="row text-center" style="padding-top: 50px;">
-                <p style="color: darkcyan; font-size:15px; font-weight: bold">Copyright &copy; OpenWeatherMap</p>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
